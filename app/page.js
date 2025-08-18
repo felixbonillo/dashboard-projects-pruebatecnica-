@@ -33,10 +33,11 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gray-50 p-8">
-      <div className="max-w-7xl mx-auto py-8">
+      <div className="max-w-7xl mx-auto py-6">
         {/* Centrado */}
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-10">
-          Dashboard de Proyectos
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-10 text-center">
+          Dashboard de Proyectos <br />{" "}
+          <h3 className="text-2xl">(Prueba Técnica)</h3>
         </h1>
 
         {/* Navgeacion */}
@@ -77,7 +78,7 @@ export default function Home() {
         </nav>
 
         {activeTab === "General" && (
-          <div className="space-y-8">
+          <div className="space-y-8 transition-opacity duration-500 ease-in-out">
             <FilterSearch
               searchTerm={searchTerm}
               onSearchChange={handleSearchChange}
@@ -100,7 +101,7 @@ export default function Home() {
         )}
 
         {activeTab === "Proyectos" && (
-          <div className="space-y-8">
+          <div className="space-y-8 transition-opacity duration-500 ease-in-out">
             <FilterSearch
               searchTerm={searchTerm}
               onSearchChange={handleSearchChange}
@@ -122,7 +123,7 @@ export default function Home() {
         )}
 
         {activeTab === "Análisis" && (
-          <div className="space-y-8">
+          <div className="space-y-8 transition-opacity duration-500 ease-in-out">
             <DashboardCharts projects={filteredProjects} />
           </div>
         )}
