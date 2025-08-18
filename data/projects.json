@@ -53,5 +53,223 @@
         "teamMembers": [
             "Grace"
         ]
-    }
+    },
+    {
+        "id": "proj-5",
+        "name": "Campaña de Marketing Digital",
+        "description": "Lanzamiento de una campaña de publicidad online para nuevo producto.",
+        "status": "Pendiente",
+        "priority": "Baja",
+        "startDate": "2024-09-15",
+        "endDate": "2024-11-30",
+        "budget": 7500,
+        "teamMembers": [
+            "Hannah"
+        ]
+    },
+    {
+        "id": "proj-6",
+        "name": "Mantenimiento de Servidores",
+        "description": "Mantenimiento rutinario y actualización de la infraestructura de servidores.",
+        "status": "Completado",
+        "priority": "Baja",
+        "startDate": "2024-01-01",
+        "endDate": "2024-01-31",
+        "budget": 3000,
+        "teamMembers": [
+            "Ivan"
+        ]
+    },
+    {
+        "id": "proj-7",
+        "name": "Investigación de Mercado para Expansión",
+        "description": "Análisis de mercados potenciales para la expansión de la empresa.",
+        "status": "En Progreso",
+        "priority": "Baja",
+        "startDate": "2024-07-01",
+        "endDate": "2024-12-31",
+        "budget": 10000,
+        "teamMembers": [
+            "Julia",
+            "Kevin"
+        ]
+    },
+    {
+        "id": "proj-8",
+        "name": "Auditoría de Seguridad Informática",
+        "description": "Revisión exhaustiva de vulnerabilidades en los sistemas actuales.",
+        "status": "En Progreso",
+        "priority": "Alta",
+        "startDate": "2024-04-15",
+        "endDate": "2024-06-30",
+        "budget": 18000,
+        "teamMembers": [
+            "Liam",
+            "Mia"
+        ]
+    },
+    {
+        "id": "proj-9",
+        "name": "Desarrollo de Plataforma E-learning",
+        "description": "Creación de un entorno virtual de aprendizaje interactivo.",
+        "status": "Pendiente",
+        "priority": "Media",
+        "startDate": "2025-01-01",
+        "endDate": "2025-09-30",
+        "budget": 60000,
+        "teamMembers": [
+            "Noah",
+            "Olivia",
+            "Peter"
+        ]
+    },
+    {
+        "id": "proj-10",
+        "name": "Actualización de Políticas de Privacidad",
+        "description": "Revisión y adaptación de políticas a nuevas regulaciones de datos.",
+        "status": "Completado",
+        "priority": "Baja",
+        "startDate": "2023-10-01",
+        "endDate": "2023-12-15",
+        "budget": 5000,
+        "teamMembers": [
+            "Quinn"
+        ]
+    },
+    {
+        "id": "proj-11",
+        "name": "Migración de Datos a la Nube",
+        "description": "Transferencia de bases de datos y aplicaciones a infraestructura cloud.",
+        "status": "En Progreso",
+        "priority": "Alta",
+        "startDate": "2024-05-01",
+        "endDate": "2024-11-30",
+        "budget": 35000,
+        "teamMembers": [
+            "Rachel",
+            "Sam",
+            "Tina"
+        ]
+    },
+    {
+        "id": "proj-12",
+        "name": "Diseño de Interfaz de Usuario para Nuevo Producto",
+        "description": "Creación de wireframes y prototipos para la UX/UI de un nuevo software.",
+        "status": "Pendiente",
+        "priority": "Media",
+        "startDate": "2024-08-01",
+        "endDate": "2024-10-31",
+        "budget": 9000,
+        "teamMembers": [
+            "Uma"
+        ]
+    },
+    {
+        "id": "proj-13",
+        "name": "Desarrollo de API de Integración",
+        "description": "Construcción de una API para conectar sistemas internos con terceros.",
+        "status": "En Progreso",
+        "priority": "Alta",
+        "startDate": "2024-06-15",
+        "endDate": "2025-01-31",
+        "budget": 28000,
+        "teamMembers": [
+            "Victor",
+            "Wendy"
+        ]
+    },
+    {
+        "id": "proj-14",
+        "name": "Formación de Personal en Nueva Herramienta",
+        "description": "Capacitación intensiva para el equipo sobre el uso de software de gestión.",
+        "status": "Completado",
+        "priority": "Baja",
+        "startDate": "2024-02-01",
+        "endDate": "2024-02-29",
+        "budget": 4000,
+        "teamMembers": [
+            "Xavier"
+        ]
+    },
+    {
+        "id": "proj-15",
+        "name": "Expansión de Infraestructura de Red",
+        "description": "Ampliación de la capacidad de red en las oficinas principales.",
+        "status": "En Progreso",
+        "priority": "Media",
+        "startDate": "2024-07-01",
+        "endDate": "2024-09-30",
+        "budget": 15000,
+        "teamMembers": [
+            "Yara",
+            "Zane"
+        ]
+    },
+    {
+        "id": "proj-16",
+        "name": "Creación de Contenido para Blog",
+        "description": "Generación de artículos y material visual para el blog corporativo.",
+        "status": "Pendiente",
+        "priority": "Baja",
+        "startDate": "2024-08-01",
+        "endDate": "2024-12-31",
+        "budget": 2000,
+        "teamMembers": [
+            "Anna"
+        ]
+    },
+    {
+        "id": "proj-17",
+        "name": "Desarrollo de Chatbot de Soporte",
+        "description": "Implementación de un asistente virtual para atención al cliente.",
+        "status": "En Progreso",
+        "priority": "Alta",
+        "startDate": "2024-09-01",
+        "endDate": "2025-02-28",
+        "budget": 22000,
+        "teamMembers": [
+            "Ben",
+            "Chloe"
+        ]
+    },
+    {
+        "id": "proj-18",
+        "name": "Análisis de Datos de Ventas",
+        "description": "Estudio de tendencias y patrones en los datos históricos de ventas.",
+        "status": "Completado",
+        "priority": "Baja",
+        "startDate": "2024-03-01",
+        "endDate": "2024-04-30",
+        "budget": 6000,
+        "teamMembers": [
+            "Daniel"
+        ]
+    },
+    {
+        "id": "proj-19",
+        "name": "Desarrollo de Módulo de Pagos Online",
+        "description": "Integración de nuevas pasarelas de pago en la plataforma existente.",
+        "status": "En Progreso",
+        "priority": "Media",
+        "startDate": "2024-10-01",
+        "endDate": "2025-01-31",
+        "budget": 16000,
+        "teamMembers": [
+            "Emily",
+            "Fred"
+        ]
+    },
+    {
+        "id": "proj-20",
+        "name": "Diseño de Infografía para Reporte Anual",
+        "description": "Creación de elementos visuales para el informe anual de la empresa.",
+        "status": "Pendiente",
+        "priority": "Baja",
+        "startDate": "2024-11-01",
+        "endDate": "2024-12-15",
+        "budget": 3500,
+        "teamMembers": [
+            "Georgia"
+        ]
+    } 
 ]

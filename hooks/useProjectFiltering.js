@@ -8,7 +8,7 @@ const useProjectFiltering = () => {
 
   //Logica de filtrado
     const filteredProjects = useMemo(() => {
-    return ProjectsData.filter((project) => {
+    return projectData.filter((project) => {
         const matchesSearchTerm =
         project.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
         project.description
