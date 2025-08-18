@@ -1,6 +1,7 @@
 "use client"; //Significa que es un componente del lado del navegador
 
 import React from "react";
+import Link from "next/link";
 
 const ProjectCard = ({ project }) => {
   //Funcion para determinar el color de la etiqueta de estado
@@ -22,7 +23,7 @@ const ProjectCard = ({ project }) => {
       <h2 className="text-xl font-semibold text-gray-900 mb-2 leading-tight">
         {project.name}
       </h2>
-      <p className="text-sm text-gray-600 mb-3 line-clap-2">
+      <p className="text-sm text-gray-600 mb-3 line-clamp-2">
         {project.description}
       </p>
       <div className="flex flex-wrap items-center gap-2 mb-4">
@@ -46,9 +47,9 @@ const ProjectCard = ({ project }) => {
           Fin: <span className="font-medium">{project.endDate}</span>
         </p>
       </div>
-      <button className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-300 ease-in-out text-sm">
+      <Link href={`/projects/${project.id}`} className="mt-6 block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-300 ease-in-out text-sm">
         Ver Detalles
-      </button>
+      </Link>
     </div>
   );
 };
