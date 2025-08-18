@@ -19,8 +19,8 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-6 flex flex-col justify-between border border-gray-200 min-h-[220px]">
-      <h2 className="text-xl font-semibold text-gray-900 mb-2 leading-tight">
+    <div className="bg-white rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 p-6 flex flex-col justify-between border border-gray-200 min-h-[220px]">
+      <h2 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
         {project.name}
       </h2>
       <p className="text-sm text-gray-600 mb-3 line-clamp-2">
@@ -28,24 +28,25 @@ const ProjectCard = ({ project }) => {
       </p>
       <div className="flex flex-wrap items-center gap-2 mb-4">
         <span
-          className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${getStatusColor(
-            project.status
-          )}`}
+          className={`text-xs font-medium px-2.5 py-0.5 rounded-full border ${getStatusColor(project.status)}`}
         >
+          {project.status === 'En Progreso' && '⏳ '}
+          {project.status === 'Completado' && '✅ '}
+          {project.status === 'Pendiente' && '📝 '}
           {project.status}
         </span>
-        <span className="text-xs text-gray-500 bg-gray-50 px-2 5 py-0 5 rounded-full border border-gray-200">
+        {/* Added an emoji for priority */}
+        <span className="text-xs text-gray-500 bg-gray-50 px-2.5 py-0.5 rounded-full border border-gray-200">
+          {project.priority === 'Alta' && '🔥 '}
+          {project.priority === 'Media' && '⚠️ '}
+          {project.priority === 'Baja' && '⬇️ '}
           Prioridad: {project.priority}
         </span>
       </div>
 
       <div className="text-xs text-gray-700 space-y-1">
-        <p>
-          Inicio: <span className="font-medium">{project.startDate}</span>
-        </p>
-        <p>
-          Fin: <span className="font-medium">{project.endDate}</span>
-        </p>
+        <p>📅 Inicio: <span className="font-medium">{project.startDate}</span></p>
+        <p>🏁 Fin: <span className="font-medium">{project.endDate}</span></p>
       </div>
       <Link href={`/projects/${project.id}`} className="mt-6 block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-300 ease-in-out text-sm">
         Ver Detalles
