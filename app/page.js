@@ -36,8 +36,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto py-6">
         {/* Centrado */}
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-10 text-center">
-          Dashboard de Proyectos <br />{" "}
-          <h3 className="text-2xl">(Prueba Técnica)</h3>
+          Dashboard de Proyecto
         </h1>
 
         {/* Navgeacion */}

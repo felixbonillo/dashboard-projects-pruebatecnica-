@@ -73,18 +73,15 @@ const ProjectBudgetChart = ({ projects }) => {
     },
     scales: {
       y: {
-        begindAtZero: true,
-        text: "Presupuesto ($)",
-        font: {
-          size: 14,
-        },
-        ticks: {
-          callback: function (value) {
-            return `$${value.toLocaleString()}`; //Formato de moneda
+        beginAtZero: true, // ✅ Corregido el error tipográfico
+        title: {             // ✅ 'title' ahora es un objeto
+          display: true,     // ✅ 'display: true' para mostrar el título
+          text: "Presupuesto ($)",
+          font: {
+            size: 14,
           },
         },
       },
-
       x: {
         title: {
           display: true,

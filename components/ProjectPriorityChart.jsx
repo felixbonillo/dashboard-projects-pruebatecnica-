@@ -13,17 +13,26 @@ const ProjectPriorityChart = ({ projects }) => {
         return acc;
     }, {});
 
+    //Colores grafica
+    const priorityColors = {
+        'Alta': 'rgba(255, 99, 132, 0.6)',   // Rojo
+        'Media': 'rgba(255, 159, 64, 0.6)', // Naranja
+        'Baja': 'rgba(153, 102, 255, 0.6)', // Morado
+    }
+
+    // Generar los colores de fondo basados en las prioridades detectadas
+    const backgroundColors = Object.keys(priorityCounts).map(priority => {
+        return priorityColors[priority] || 'rgba(128, 128, 128, 0.6)'; // Color por defecto si la prioridad no está mapeada
+    });
+
     const data = {
         labels: Object.keys(priorityCounts),
         datasets: [
             {
-                label: 'Numero de Proyectos',
+                label: 'Prioridad de Proyectos',
                 data: Object.values(priorityCounts),
-                backgroundColor: [
-                    'rgba(255 , 99, 132, 0.6)', //Rojo (Alta)
-                    'rgba(255, 159, 64, 0.6)', //Naranja (Media)
-                    'rgba(153, 102, 255, 0.6)', //Morado (Baja)
-                ],
+                backgroundColor: backgroundColors, // <-- Usa los colores generados dinámicamente
+                borderColor: backgroundColors.map(color => color.replace('0.6', '1')),
                 borderWidth: 1,
             },
         ],
@@ -32,14 +41,6 @@ const ProjectPriorityChart = ({ projects }) => {
     const options = {
         responsive: true,
         plugins: {
-            legend: {
-                position: 'top',
-                labels: {
-                    font: {
-                        size: 14
-                    }
-                }
-            },
             title: {
                 display: false,
                 text: 'Proyectos por Prioridad'
@@ -49,7 +50,10 @@ const ProjectPriorityChart = ({ projects }) => {
                     label: function (context) {
                         let label = context.label || '';
                         if (label) label += ': ';
-                        if (context.parsed !== null) {
+                        if (context.parsed && typeof context.parsed.y === 'number') { // Verifica que existe y es un número
+                            label += context.parsed.y; // ✅ Accede a la propiedad 'y'
+                        } else if (context.parsed !== null) {
+
                             label += context.parsed;
                         }
                         return label + ' proyectos';
