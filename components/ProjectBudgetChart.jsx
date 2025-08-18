@@ -38,7 +38,7 @@ const ProjectBudgetChart = ({ projects }) => {
         label: "Presupuesto Total",
         data: Object.values(budgetByStatus),
         backgroundColor: "rgba(54, 162, 235, 1)",
-        borderWith: 1,
+        borderWidth: 1,
       },
     ],
   };
@@ -58,27 +58,21 @@ const ProjectBudgetChart = ({ projects }) => {
         display: false,
         text: "Presupuesto por Estado de Proyecto",
       },
-      tooltip: {
-        callbacks: {
-          label: function (context) {
-            let label = context.label || "";
-            if (label) label += ": ";
-            if (context.parsed !== null) {
-              label += `$${context.parsed.toLocaleString()}`;
-            }
-            return label;
-          },
-        },
-      },
     },
     scales: {
       y: {
-        beginAtZero: true, // ✅ Corregido el error tipográfico
-        title: {             // ✅ 'title' ahora es un objeto
-          display: true,     // ✅ 'display: true' para mostrar el título
+        beginAtZero: true,
+        title: {
+          display: true,
           text: "Presupuesto ($)",
           font: {
             size: 14,
+          },
+
+        },
+        ticks: {
+          callback: function (value) {
+            return `$${value.toLocaleString()}`;
           },
         },
       },

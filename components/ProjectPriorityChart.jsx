@@ -31,7 +31,7 @@ const ProjectPriorityChart = ({ projects }) => {
             {
                 label: 'Prioridad de Proyectos',
                 data: Object.values(priorityCounts),
-                backgroundColor: backgroundColors, // <-- Usa los colores generados dinámicamente
+                backgroundColor: backgroundColors,
                 borderColor: backgroundColors.map(color => color.replace('0.6', '1')),
                 borderWidth: 1,
             },
