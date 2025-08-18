@@ -131,7 +131,7 @@ export default function Home() {
       {/* Footer del Dashboard */}
       <footer className="mt-12 text-center text-gray-500 text-sm">
         <p>Hecho con ❤️ en Next.js, Tailwind CSS y Recharts.</p>
-        <p>&copy; {new Date().getFullYear()} Dashboard de Proyectos. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Dashboard de Proyectos por Felix Bonillo. Todos los derechos reservados.</p>
       </footer>
     </main>
   );
