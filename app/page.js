@@ -6,20 +6,6 @@ import FilterSearch from "@/components/FilterSearch";
 import ProjectsData from "../data/projects.json"
 
 export default function Home() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [statusFilter, setStatusFilter] = useState('')
-
-  //Logica de filtrado
-  const filteredProjects = useMemo(() => {
-    return ProjectsData.filter((project) => {
-      const matchesSearchTerm = 
-        project.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-        project.description.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
-
-        const matchesStatus = statusFilter === '' || project.status ===statusFilter
-        return matchesSearchTerm && matchesStatus
-    })
-  }, [searchTerm, statusFilter]) // Dependencias para recalcular)
 
   //Funcion para manejar el cambio en la barra de busqueda
   const handleSearchChange = value => setSearchTerm(value)
