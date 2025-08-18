@@ -4,6 +4,8 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
 
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+
 const ProjectPriorityChart = ({ projects }) => {
     // Datos para la grafica
     const priorityCounts = projects.reduce((acc, project) => {
@@ -66,14 +68,16 @@ const ProjectPriorityChart = ({ projects }) => {
                     }
                 },
                 ticks: {
-                    stepSize: 1 
+                    stepSize: 1
                 }
             },
             x: {
-                title: true,
-                text: 'Prioridad',
-                font: {
-                    size: 14
+                title: {
+                    display: true,
+                    text: 'Prioridad',
+                    font: {
+                        size: 14
+                    }
                 }
             }
         }
@@ -83,7 +87,7 @@ const ProjectPriorityChart = ({ projects }) => {
         <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col items-center">
             <h3 className="text-xl font-semibold text-gray-800 mb-4 ">Proyectos por Prioridad</h3>
             <div className="w-full max-w-lg">
-                <Bar data={data} options={options} />   
+                <Bar data={data} options={options} />
             </div>
         </div>
     );

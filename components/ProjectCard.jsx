@@ -35,7 +35,7 @@ const ProjectCard = ({ project }) => {
           {project.status === 'Pendiente' && '📝 '}
           {project.status}
         </span>
-        {/* Added an emoji for priority */}
+        {/* Emojis */}
         <span className="text-xs text-gray-500 bg-gray-50 px-2.5 py-0.5 rounded-full border border-gray-200">
           {project.priority === 'Alta' && '🔥 '}
           {project.priority === 'Media' && '⚠️ '}
